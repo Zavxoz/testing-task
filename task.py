@@ -28,7 +28,7 @@ def vertical_line(pl, nline, offset, wc):
         f.writelines(tmp)
 
 
-def diagonal_line(x1, y1, x2, y2, nline):pass
+def diagonal_line(x1, y1, x2, y2, nline): pass
 
 def redraw(wc, hc):
     with open("output.txt", "a+b") as f:
@@ -83,10 +83,7 @@ def main():
                     if el.isalpha() and el.isdigit():
                         print("wrong line")
                         continue
-                if tmp[0] not in ['C', 'L', 'B', 'R']:
-                    print("wrong input file")
-                    break
-                elif tmp[0] == 'C':
+                if tmp[0] == 'C':
                     if count > 0 and len(output.readline()) != 0:
                         shutil.copy(r'output.txt', 'output'+str(count)+'.txt')
                         output.seek(0)
